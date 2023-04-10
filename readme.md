@@ -19,8 +19,20 @@ pip install -r requirements.txt
 #### Usage
 
 ```bash
-python main.py -i <input> -o <output> -c <command>
+python main.py [-h] -i INPUT -o OUTPUT -c COMMAND [-x] [-d]
 ```
+
+### Options:
+
+    -h, --help              show this help message and exit
+    -i INPUT, --input INPUT
+                            Input language
+    -o OUTPUT, --output OUTPUT
+                            Output language
+    -c COMMAND, --command COMMAND
+                            Command to will be converted
+    -x, --execute         Execute command and exit
+    -d, --debug           Debug mode
 
 for example,
 
