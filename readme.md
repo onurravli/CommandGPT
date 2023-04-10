@@ -19,6 +19,18 @@ pip install -r requirements.txt
 #### Usage
 
 ```bash
+python main.py -i <input> -o <output> -c <command>
+```
+
+for example,
+
+```bash
+python main.py -i "Create a file named test.txt" -o "PowerShell"
+```
+
+or use the interactive mode
+
+```bash
 python main.py
 ```
 
