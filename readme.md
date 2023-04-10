@@ -25,7 +25,7 @@ python main.py -i <input> -o <output> -c <command>
 for example,
 
 ```bash
-python main.py -i nlp -o ps -c "Create a file named test.txt"
+python main.py -i nat -o ps -c "Create a file named test.txt"
 ```
 
 or use the interactive mode
