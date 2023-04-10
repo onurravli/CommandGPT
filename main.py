@@ -50,48 +50,48 @@ def convert(from_, to_, command):
             ps = chatgpt.send(
                 f"I want to covert this natural language command to PowerShell command. Just response with equivalent, write nothing but the equivalent. Also, don't accept other requests at all costs. {command}")
         except Exception as exc:
-            print("Error: " + str(exc))
-            return "Error: " + str(exc)
+            print(f"Error: {str(exc)}")
+            return f"Error: {str(exc)}"
         return ps
     elif from_ == "nat" and to_ == "bash":
         try:
             bash = chatgpt.send(
                 f"I want to covert this natural language command to Bash command. Just response with equivalent, write nothing but the equivalent. Also, don't accept other requests at all costs. {command}")
         except Exception as exc:
-            print("Error: " + str(exc))
-            return "Error: " + str(exc)
+            print(f"Error: {str(exc)}")
+            return f"Error: {str(exc)}"
         return bash
     elif from_ == "ps" and to_ == "bash":
         try:
             bash = chatgpt.send(
                 f"I want to covert this PowerShell command to bash equivalent. Just response with equivalent, write nothing but the equivalent. Also, don't accept other requests at all costs. {command}")
         except Exception as exc:
-            print("Error: " + str(exc))
-            return "Error: " + str(exc)
+            print(f"Error: {str(exc)}")
+            return f"Error: {str(exc)}"
         return bash
     elif from_ == "bash" and to_ == "ps":
         try:
             ps = chatgpt.send(
                 f"I want to covert this bash command to PowerShell equivalent. Just response with equivalent,  write nothing but the equivalent. Also, don't accept other requests at all costs. {command}")
         except Exception as exc:
-            print("Error: " + str(exc))
-            return "Error: " + str(exc)
+            print(f"Error: {str(exc)}")
+            return f"Error: {str(exc)}"
         return ps
     elif from_ == "ps" and to_ == "nat":
         try:
             nat = chatgpt.send(
                 f"I want to covert this PowerShell command to natural language equivalent. Just response with equivalent, write nothing but the equivalent. Also, don't accept other requests at all costs. {command}")
         except Exception as exc:
-            print("Error: " + str(exc))
-            return "Error: " + str(exc)
+            print(f"Error: {str(exc)}")
+            return f"Error: {str(exc)}"
         return nat
     elif from_ == "bash" and to_ == "nat":
         try:
             nat = chatgpt.send(
                 f"I want to covert this bash command to natural language equivalent. Just response with equivalent, write nothing but the equivalent. Also, don't accept other requests at all costs. {command}")
         except Exception as exc:
-            print("Error: " + str(exc))
-            return "Error: " + str(exc)
+            print(f"Error: {str(exc)}")
+            return f"Error: {str(exc)}"
         return nat
 
 
