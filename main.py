@@ -33,6 +33,16 @@ def ascii_art():
     """
 
 
+def parse_args(input_): # python main.py -i nat -o ps -c "list all files in the current directory"
+    import argparse
+    parser = argparse.ArgumentParser()
+    parser.add_argument("-i", "--input", help="Input language", required=True)
+    parser.add_argument("-o", "--output", help="Output language", required=True)
+    parser.add_argument("-c", "--command", help="Command to convert", required=True)
+    args = parser.parse_args(input_)
+    return args.input, args.output, args.command
+
+
 def convert(from_, to_, command):
     chatgpt = ChatGPT(os.getenv("OPENAI_API_KEY"))
     if from_ == "nat" and to_ == "ps":
@@ -127,6 +137,10 @@ if __name__ == "__main__":
     if os.getenv("OPENAI_API_KEY") is None:
         print("Please set the OPENAI_API_KEY environment variable.")
         sys.exit(1)
+    if len(sys.argv) > 1:
+        from_, to_, command = parse_args(sys.argv[1:])
+        print(f"{convert(from_, to_, command)}")
+        sys.exit(0)
     print(ascii_art())
     print("Welcome to the CommandGPT!")
     try:
