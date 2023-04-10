@@ -34,6 +34,9 @@ python main.py [-h] -i INPUT -o OUTPUT -c COMMAND [-x] [-d]
     -x, --execute         Execute command and exit
     -d, --debug           Debug mode
 
+
+https://user-images.githubusercontent.com/47084109/231006746-ccd82554-0ec7-431e-a612-bbb3f29f0dd4.mp4
+
 for example,
 
 ```bash
@@ -41,6 +44,10 @@ python main.py -i nat -o ps -c "Create a file named test.txt"
 ```
 
 or use the interactive mode
+
+
+https://user-images.githubusercontent.com/47084109/231006889-ceb8d60c-dea3-4c8f-88d6-a50be29ee615.mp4
+
 
 ```bash
 python main.py
